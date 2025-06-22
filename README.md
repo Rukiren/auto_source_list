@@ -15,3 +15,8 @@ sudo ./set_mirror_twds.sh kali
 
 ## TWDS 這隻 mirror 是什麼
 https://docs.google.com/presentation/d/1WtAM_xv6BuEAbXdxXOAD9gHfa6I2nGdykTGSVOtXqU4/edit#slide=id.p
+
+## Why Don't use TWDS?
+- 快
+- 新
+- 你會需要看這表示沒看簡報，罰你去看一次
