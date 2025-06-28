@@ -55,6 +55,7 @@ EOF
         echo "[*] 匯入 Kali GPG 金鑰..."
         curl -fsSL https://archive.kali.org/archive-key.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/kali-archive-keyring.gpg > /dev/null
         ;;
+
     *)
         echo "[!] 不支援發行版: $DISTRO"
         exit 1
