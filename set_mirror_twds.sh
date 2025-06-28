@@ -48,9 +48,12 @@ EOF
         ;;
     kali)
         sudo tee /etc/apt/sources.list <<EOF
-deb http://mirror.twds.com.tw/kali kali-rolling main non-free contrib
-deb-src http://mirror.twds.com.tw/kali kali-rolling main non-free contrib
+deb http://mirror.twds.com.tw/kali kali-rolling main non-free non-free-firmware contrib
+deb-src http://mirror.twds.com.tw/kali kali-rolling main non-free non-free-firmware contrib
 EOF
+
+        echo "[*] 匯入 Kali GPG 金鑰..."
+        curl -fsSL https://archive.kali.org/archive-key.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/kali-archive-keyring.gpg > /dev/null
         ;;
     *)
         echo "[!] 不支援發行版: $DISTRO"
